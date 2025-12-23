@@ -169,3 +169,55 @@ html, body {
     justify-content: center;
   }
 }
+
+/* =====================================
+   NEW TO HOME ENTERTAINMENT – MOBILE FIX
+===================================== */
+
+@media (max-width: 640px) {
+  /* Target ONLY the first content section */
+  main > div:nth-of-type(2) ul {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* Shrink cards to fit 2 columns */
+  main > div:nth-of-type(2) .imageN {
+    width: 100% !important;
+  }
+
+  main > div:nth-of-type(2) img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* =====================================
+   LIBRARY – MOBILE 2 COLUMN FIX
+===================================== */
+
+@media (max-width: 640px) {
+  /* Target ONLY Library section */
+  main > div:nth-of-type(3) ul {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* Force cards to fit grid */
+  main > div:nth-of-type(3) figure {
+    width: 100% !important;
+  }
+
+  main > div:nth-of-type(3) img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
