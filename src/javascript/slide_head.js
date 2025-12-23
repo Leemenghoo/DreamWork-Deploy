@@ -77,11 +77,13 @@ setTimeout(() => activate(0), 50);
 const searchBtn = document.getElementById('searchBtn');
 const searchContainer = document.querySelector('.search-container');
 const searchInput = document.getElementById('searchInput');
+const navCollapsible = document.querySelector('.nav-collapsible');
 
 if (searchBtn && searchContainer && searchInput) {
     searchBtn.onclick = (e) => {
         e.preventDefault();
         searchContainer.classList.toggle('active');
+        if (navCollapsible) navCollapsible.classList.toggle('search-open', searchContainer.classList.contains('active'));
         if (searchContainer.classList.contains('active')) {
             searchInput.focus();
         }
@@ -91,6 +93,7 @@ if (searchBtn && searchContainer && searchInput) {
     document.addEventListener('click', (e) => {
         if (!searchContainer.contains(e.target)) {
             searchContainer.classList.remove('active');
+            if (navCollapsible) navCollapsible.classList.remove('search-open');
         }
     });
 }

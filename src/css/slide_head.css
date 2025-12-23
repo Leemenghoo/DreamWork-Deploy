@@ -240,6 +240,7 @@
     border-bottom: 2px solid transparent;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     padding-bottom: 2px;
+    position: relative;
 }
 
 .search-container.active {
@@ -257,12 +258,22 @@
     font-size: 14px;
     font-weight: 600;
     color: #000;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 
 .search-container.active .search-input {
     width: 250px;
     opacity: 1;
     padding: 0 10px;
+    pointer-events: auto;
+}
+
+.nav-collapsible.search-open .soc {
+    transform: translateX(-260px);
 }
 
 .search-btn {

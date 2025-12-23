@@ -134,9 +134,57 @@
 
 .wrapper {
     overflow-x: scroll;
-
 }
 
 .wrapper::-webkit-scrollbar {
     display: none
+}
+ @media (max-width: 1023px) {
+    .contact-img {
+        zoom: 0.85;
+        transform: scale(0.85);
+        transform-origin: 0 0;
+        -moz-transform: scale(0.85);
+        -moz-transform-origin: 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .section-contact {
+        min-height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+ 
+    
+    .main {
+        display: flex;
+        justify-content: center;
+      
+        
+    }
+    .wrapper {
+        align-items: center;
+        zoom: 0.65;
+        transform: scale(0.85);
+        transform-origin: 0 0;
+        -moz-transform: scale(0.85);
+        -moz-transform-origin: 0 0;
+        
+    }
+    
+
+   
+    /* Limit to 3 visible images */
+    .main .wrapper {
+        margin-left: 15.5rem;
+        
+        
+    }
+ 
+    
 }

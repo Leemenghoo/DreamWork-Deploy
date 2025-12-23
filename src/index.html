@@ -14,17 +14,17 @@
     <title>DreamWorks</title>
 </head>
 
-<body class="grid grid-rows-[auto_1fr_auto] min-h-[100vh]">
+<body class="grid grid-rows-[auto_1fr_auto] min-h-screen">
 
     <div class="header flex flex-col text-white p-0 text-center w-auto">
         <div class="nav bg-white w-full h-[60px] md:!w-full md:h-[75px] lg:h-[90px] flex flex-row justify-center gap-4 md:gap-[10rem] lg:gap-[20rem] z-50 fixed shadow-lg px-2 md:px-0">
             <div class="logo w-[100px] md:w-[125px] lg:w-[150px] h-auto mr-0  lg:mr-[9rem] mt-[5px] md:mt-[8px] lg:mt-[10px] justify-center items-center flex z-[110]">
                 <a href="/src/index.html" target="_blank" aria-label="x-block">
-                    <img src="/img/logo.png" class="h-[50px] md:h-[60px] lg:ml-[44rem] lg:h-[70px] w-[80px] md:w-[100px] lg:w-[120px] xl:ml-[120px]" alt="">
+                    <img src="/img/logo.png" class="h-[50px] md:h-[60px] md:mr-[20rem] lg:ml-[44rem] lg:ml-[18rem]  lg:h-[70px] w-[80px] md:w-[100px] lg:w-[120px] xl:ml-[120px]" alt="">
                 </a>
             </div>
-            <div class="nav-collapsible hidden lg:flex flex-row items-center p-0 lg:mr-[24rem] xl:mr-[50px] justify-center">
-                <ul class="soc flex flex-row items-center transition-all mr-[4rem] lg:mr-[6rem] xl:mr-[8rem] duration-400 z-[110]">
+            <div class="nav-collapsible flex lg:flex flex-row items-center p-0 lg:mr-[24rem] xl:mr-[50px] justify-center">
+                <ul class="soc hidden lg:flex flex-row items-center transition-all mr-[4rem] lg:mr-[6rem] xl:mr-[8rem] duration-400 z-[110]">
                     <li class="h-auto w-[50px] lg:w-[60px] flex justify-center items-center text-black p-1.5 lg:p-2">
                         <a href="https://x.com/DreamWorks" target="x-block" aria-label="x-block">
                             <img src="/img/Twitter X Logo PNG.png" alt="">
@@ -52,7 +52,7 @@
                     </li>
                 </ul>
 
-                <div class="search-wrapper flex items-center shrink-0 z-[110]">
+                <div class="search-wrapper flex items-center shrink-0 z-[110] md:ml-[5rem] lg:ml-[-5rem]">
                     <div class="search-container flex items-center flex-row-reverse">
                         <button class="search-btn logo-link cursor-pointer focus:outline-none" id="searchBtn">
                             <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -61,7 +61,7 @@
                     </div>
                 </div>
 
-                <ul class="nav-links flex flex-row  items-center gap-[0.8rem] lg:gap-[1rem] pl-4 lg:pl-8">
+                <ul class="nav-links hidden lg:flex flex-row  items-center gap-[0.8rem] lg:gap-[1rem] pl-4 lg:pl-8 ml-auto">
                     <li class="h-auto w-[50px] lg:w-[60px] flex flex-col justify-center items-center text-black p-2 lg:p-3 text-xs font-bold uppercase">
                         <a href="#" class="nav-link logo-link hover:text-blue-500 transition-colors duration-300">MOVIE</a>
                         <div class="nav-dropdown bg-[#052c6f] w-full flex flex-col fixed top-[60px] md:top-[75px] lg:top-[90px] left-0 h-auto lg:h-[450px] hidden overflow-y-auto lg:overflow-visible">
@@ -295,15 +295,14 @@
                             </div>
                         </div>
                     </li>
-
-                    <li class="h-auto !flex items-center justify-center cursor-pointer ml-3 lg:ml-6 ">
-                        <button id="menuToggle" class="flex flex-col gap-[5px] w-6 lg:w-7 transition-all duration-300 relative h-5 items-center justify-center">
-                            <span class="line-1 h-[2px] w-full bg-[#052c6f] transition-all duration-300"></span>
-                            <span class="line-2 h-[2px] w-full bg-[#052c6f] transition-all duration-300"></span>
-                        </button>
-                    </li>   
+                      
                 </ul>
-                
+                <div class="h-auto !flex items-center justify-center cursor-pointer md:ml-[4rem] ml-5 lg:ml-6 ">
+                    <button id="menuToggle" class="flex flex-col gap-[5px] w-6 lg:w-7 transition-all duration-300 relative h-5 items-center justify-center">
+                        <span class="line-1 h-[2px] w-full bg-[#052c6f] transition-all duration-300"></span>
+                        <span class="line-2 h-[2px] w-full bg-[#052c6f] transition-all duration-300"></span>
+                    </button>
+                </div> 
             </div>
             
             <div class="subscribe-wrapper hidden lg:block xl:block">
@@ -399,7 +398,7 @@
         </div>
     </div>
 
-    <div class="main w-full">
+    <div class="main w-full ">
         <div class="card-a w-full max-w-[1600px] h-auto py-12 md:py-16 lg:h-[900px] flex flex-col justify-center relative items-center mx-auto px-4 md:px-0">
             <p class="uppercase font-black tracking-[3px] md:tracking-[5px] text-blue-950 text-[40px] md:text-[50px] lg:text-[60px] mb-8 lg:absolute lg:top-8">MOVIE</p>
             <div class="gallery-wrap w-full">
@@ -688,10 +687,10 @@
     <script src="javascript/hover-feature.js"></script>
     <script src="javascript/menu.js"></script>  
     
-    <div class="section-contact w-full flex flex-col lg:flex-row md:items-center md:justify-center" id="newsletter-section">
-        <div class="contact-form w-full lg:w-1/2 p-6 md:p-8 lg:p-12">
-            <h2 class="text-2xl md:text-3xl lg:text-4xl mb-4">STAY IN TOUCH</h2>
-            <p class="text-sm md:text-base mb-6 lg:w-[600px]">
+    <div class="section-contact w-full  flex flex-col lg:flex-row md:items-center md:justify-center" id="newsletter-section">
+        <div class="contact-form w-full lg:h-[400px] lg:w-1/2 p-6 md:p-8 lg:p-12">
+            <h2 class="text-2xl md:text-3xl md:text-4xl mb-4">STAY IN TOUCH</h2>
+            <p class="text-sm md:text-base md:w-[600px] mb-6 lg:w-[600px]">
                 Register today for the DreamWorks Animation newsletter to receive
                 <br class="hidden md:block" />all the latest information about our upcoming films and
                 projects.
@@ -718,7 +717,7 @@
             <button class="contact-btn mt-6 w-full sm:w-auto">NEXT</button>
         </div>
 
-        <div class="contact-img w-full lg:w-1/2 h-64 md:h-96 lg:h-auto">
+        <div class="contact-img w-full lg:w-1/2 h-64 md:h-96 md:flex md:ml-[35rem] lg:h-auto">
             <img src="/img/footer/contact-img.jpg" alt="" class="w-full h-full object-cover" />
         </div>
     </div>
