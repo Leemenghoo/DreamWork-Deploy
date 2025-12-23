@@ -5,8 +5,13 @@ let current = 0, startX = 0;
 slides.forEach((s, i) => {
     const btn = document.createElement('button');
     btn.className = 'text-t';
-    btn.style.flexGrow = s.dataset.duration || 8;
-    btn.innerHTML = `<div class="text-tab-lab">${s.dataset.title}</div><div class="text-tab-pro-bg"><div class="text-tab-pro-fill"></div></div>`;
+    // flexGrow is gone, so CSS 'flex: 1' will take over
+    btn.innerHTML = `<div class="text-tab-content">
+        <div class="text-tab-lab">${s.dataset.title}</div>
+        <div class="text-tab-pro-bg">
+            <div class="text-tab-pro-fill"></div>
+        </div>
+    </div>`;
     btn.onclick = () => activate(i);
     btn.querySelector('.text-tab-pro-fill').addEventListener('animationend', () => i === current && next());
     line.appendChild(btn);
@@ -34,7 +39,7 @@ function activate(idx) {
             fill.style.width = '100%';
         } else if (i === current) {
             void fill.offsetWidth;
-            fill.style.animation = `pro ${slides[current].dataset.duration || 8}s linear forwards`;
+            fill.style.animation = `pro ${slides[current].dataset.duration || 5}s linear forwards`;
         }
     });
 }

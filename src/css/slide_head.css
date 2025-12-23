@@ -4,7 +4,13 @@
     --p: #3b82f6;
     --t: 0.8s;
 }
-
+.subscribe-clip {
+    /* Top corners are 0%, bottom corners are pulled in by 15% */
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .slider-container {
     position: relative;
@@ -51,27 +57,31 @@
 .slide-overlay {
     position: absolute;
     z-index: 20;
-    top: 35%;
-    left: 10%;
-    width: 600px;
+    top: 40%; /* Adjusted for better balance */
+    left: 8%;  /* Slightly more margin from the left */
+    width: 100%;
+    max-width: 600px; /* Wider to accommodate the title */
     display: flex;
     flex-direction: column;
     text-align: left;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .slide-overlay h2 {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 0.85;
+    letter-spacing: 5px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    color: white;
 }
 
 .slide-overlay p {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    max-width: 400px;
+    max-width: 600px;
     line-height: 1.5;
     font-weight: 500;
 }
@@ -132,15 +142,17 @@
 }
 
 .text-t {
+    flex: 1; 
     background: none;
     border: 0;
     cursor: pointer;
     padding: 0;
     position: relative;
     display: flex;
-    flex-flow: column-reverse;
+    flex-direction: column; 
     opacity: .5;
     transition: .3s;
+    min-width: 0; 
 }
 
 .text-t:hover,
@@ -149,18 +161,18 @@
 }
 
 .text-tab-lab {
-    font-size: .875rem;
+    font-size: 0.7rem;        /* Smaller font size */
     font-weight: 700;
     color: #fff;
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 6px;       /* Reduced space between text and line */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
     text-shadow: 0 1px 3px #000;
-    text-align: left;
-    padding-left: 2px;
+    text-align: center;       /* Centers the title */
+    padding: 0 4px;           /* Prevents text from touching the edges */
 }
 
 .text-tab-pro-bg {
@@ -251,4 +263,52 @@
 .logo-link {
     text-decoration: none;
     color: inherit;
+}
+ 
+
+/* style animation on text and button */
+.slide-overlay > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.slide-overlay p {
+    margin-bottom: 0.2rem;
+    display: block;
+}
+.slide .slide-overlay p,
+.slide .slide-overlay h2,
+.slide .slide-overlay .text-g1 {
+    opacity: 0;
+    transform: translateY(30px); 
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+@keyframes slideUpIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide.active .slide-overlay p {
+    animation: slideUpIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    animation-delay: 0.3s;  
+}
+
+.slide.active .slide-overlay h2 {
+    animation: slideUpIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    animation-delay: 0.5s;  
+}
+
+.slide.active .slide-overlay .text-g1 {
+    animation: slideUpIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.slide.active .slide-overlay .text-g1:nth-child(1) {
+    animation-delay: 0.8s;
+}
+.slide.active .slide-overlay .text-g1:nth-child(2) {
+    animation-delay: 0.95s;
 }
