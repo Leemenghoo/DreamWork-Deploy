@@ -74,7 +74,8 @@
   max-width: 600px;
 }
 .contact-img {
-  margin-left: 90px;
+    margin-left: 0;
+    max-width: 100%;
 }
 
 
@@ -220,3 +221,136 @@
   border-radius: 3px;
   cursor: pointer;
  }
+ 
+ /* about-dreamwork & footer */
+
+.about-body {
+  margin: 0;
+  background: #002e6d;
+  font-family: "Arial", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.about-container {
+  padding: 50px 0;
+}
+
+.about-container h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.about-container h1:hover {
+  transition: all -0.4s linear;
+  color: #4169e1;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.tabs a {
+  color: #c6d9ff;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.tabs a.active {
+  color: #4169e1;
+}
+
+.tabs a.active::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.desc {
+  max-width: 900px;
+  margin: 40px auto;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.out-container {
+  /* background-color:yellow; */
+  width: 100%;
+  height: 500px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.items-con {
+  width: 600px;
+  height: 322px;
+  display: flex;
+  margin:10px 0;
+}
+.style h2 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: 1.5px;
+  color: #002e6d;
+}
+.items-con img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+.style {
+  display: block;
+}
+

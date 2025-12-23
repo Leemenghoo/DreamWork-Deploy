@@ -23,12 +23,13 @@
 }
 .subscribe-wrapper {
     position: absolute;
-    left: 70%;
+    left: 50%;
     top: 90px;
     transform: translateX(-50%);
     overflow: hidden;
     height: 100px;
     z-index: 120;
+    max-width: 100vw;
 }
 
 #subscribeBtn {

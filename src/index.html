@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/scroll.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/slide_head.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <title>DreamWorks</title>
@@ -688,11 +689,66 @@
         </div>
     </div>
 
-    <script src="javascript/slide.js"></script>
-    <script src="javascript/slide_head.js"></script>
-    <script src="javascript/hover-feature.js"></script>
-    <script src="javascript/menu.js"></script>  
-    
+    <div class="carousel-section">
+        <div class="carousel-container">
+            <div class="carousel-header">
+                <h1><a href="#">About dreamworks</a></h1>
+            </div>
+            <div class="carousel-nav">
+                <ul>
+                    <li><button data-target="0" class="carousel-nav-btn">Campus</button></li>
+                    <li><button data-target="1" class="carousel-nav-btn active">Movies</button></li>
+                    <li><button data-target="2" class="carousel-nav-btn">Tv</button></li>
+                    <li><button data-target="3" class="carousel-nav-btn">Tech</button></li>
+                </ul>
+            </div>
+            <div class="carousel-viewport">
+                <div class="carousel-slider">
+                    <div class="carousel-slide" data-slide="0">
+                        <figure>
+                            <img src="../img/footer/image.png" alt="Campus">
+                            <div class="carousel-overlay"></div>
+                            <h3 class="carousel-title">Campus</h3>
+                        </figure>
+                        <footer>
+                            <p>The 9-acre campus in Glendale houses over 1200 employees in the feature film division – 800 of whom are artists and 3D animators, and 200 of whom are technologists and engineers.</p>
+                        </footer>
+                    </div>
+                    <div class="carousel-slide active" data-slide="1">
+                        <figure>
+                            <img src="../img/footer/image copy.png" alt="Iconic Feature Films">
+                            <div class="carousel-overlay"></div>
+                            <h3 class="carousel-title">Iconic Feature Films</h3>
+                        </figure>
+                        <footer>
+                            <p>Home to some of the world's most beloved franchises including <em>Shrek</em>, <em>Madagascar</em>, <em>Kong Fu Panda</em>, <em>Trolls</em>, <em>The Boss Baby</em>, <em>The Croods</em> and <em>How to Train Your Dragon</em>, DreamWorks Animation creates award-wining films for a global audience.</p>
+                        </footer>
+                    </div>
+                    <div class="carousel-slide" data-slide="2">
+                        <figure>
+                            <img src="../img/footer/image copy 2.png" alt="Award-Winning Television">
+                            <div class="carousel-overlay"></div>
+                            <h3 class="carousel-title">Award-Winning Television</h3>
+                        </figure>
+                        <footer>
+                            <p>In 2013, the DWA Television division was launched into being with a groundbreaking deal for hundreds of hours of kids and family programming.</p>
+                        </footer>
+                    </div>
+                    <div class="carousel-slide" data-slide="3">
+                        <figure>
+                            <img src="../img/footer/image copy 3.png" alt="Innovative Technology">
+                            <div class="carousel-overlay"></div>
+                            <h3 class="carousel-title">Innovative Technology</h3>
+                        </figure>
+                        <footer>
+                            <p>Developing for the future and innovating in the present. DreamWorks Technology unleashes art.</p>
+                        </footer>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="section-contact w-full  flex flex-col lg:flex-row md:items-center md:justify-center" id="newsletter-section">
         <div class="contact-form w-full lg:h-[400px] lg:w-1/2 p-6 md:p-8 lg:p-12">
             <h2 class="text-2xl md:text-3xl md:text-4xl mb-4">STAY IN TOUCH</h2>
@@ -806,6 +862,11 @@
         </div>
     </footer>
 
+    <script src="javascript/slide.js"></script>
+    <script src="javascript/slide_head.js"></script>
+    <script src="javascript/hover-feature.js"></script>
+    <script src="javascript/menu.js"></script> 
+    <script src="javascript/about.js"></script>
 </body>
 
 </html>
