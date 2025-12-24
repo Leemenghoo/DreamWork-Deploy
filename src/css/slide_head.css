@@ -23,9 +23,9 @@
 }
 .subscribe-wrapper {
     position: absolute;
-    left: 50%;
+    left: 65%;
     top: 90px;
-    transform: translateX(-50%);
+    transform: translateX(0);
     overflow: hidden;
     height: 100px;
     z-index: 120;
