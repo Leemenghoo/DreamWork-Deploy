@@ -306,6 +306,11 @@
     /*
     h-[100%] w-[400px] bg-purple-100*/
 }
+
+ .library-grid .imageN {
+     width: 100% !important;
+     max-width: 310px;
+ }
 .imageN img {
   width: 100%;
   height: 100%;
@@ -350,6 +355,7 @@
   box-shadow: inset 0 -120px 90px -90px rgba(0, 0, 0, 0.15); 
   /* ^offset-x  ^offset-y  ^blur      ^spread     ^color   */
 }
+
 .content {
     width: 100%;
     height: 100%;

@@ -78,16 +78,60 @@ const searchBtn = document.getElementById('searchBtn');
 const searchContainer = document.querySelector('.search-container');
 const searchInput = document.getElementById('searchInput');
 const navCollapsible = document.querySelector('.nav-collapsible');
+const libraryList = document.getElementById('libraryList');
+const librarySearchInput = document.getElementById('librarySearchInput');
 
 if (searchBtn && searchContainer && searchInput) {
+    const normalizeSearchText = (value) => (value || '').toLowerCase().trim();
+
+    const applyLibraryFilter = (value) => {
+        if (!libraryList) return;
+
+        const query = normalizeSearchText(value);
+        const items = libraryList.querySelectorAll('li');
+        items.forEach((li) => {
+            const titleEl = li.querySelector('h1');
+            const title = normalizeSearchText(titleEl ? titleEl.textContent : '');
+            li.style.display = query === '' || title.includes(query) ? '' : 'none';
+        });
+    };
+
     searchBtn.onclick = (e) => {
         e.preventDefault();
+        const wasActive = searchContainer.classList.contains('active');
+
+        if (wasActive) {
+            const query = normalizeSearchText(searchInput.value);
+            if (query !== '') {
+                applyLibraryFilter(query);
+                return;
+            }
+        }
+
         searchContainer.classList.toggle('active');
         if (navCollapsible) navCollapsible.classList.toggle('search-open', searchContainer.classList.contains('active'));
         if (searchContainer.classList.contains('active')) {
             searchInput.focus();
         }
     };
+
+    searchInput.addEventListener('input', () => {
+        applyLibraryFilter(searchInput.value);
+        if (librarySearchInput) librarySearchInput.value = searchInput.value;
+    });
+
+    searchInput.addEventListener('keydown', (e) => {
+        if (e.key !== 'Enter') return;
+        e.preventDefault();
+        applyLibraryFilter(searchInput.value);
+    });
+
+    if (librarySearchInput) {
+        librarySearchInput.addEventListener('input', () => {
+            applyLibraryFilter(librarySearchInput.value);
+            searchInput.value = librarySearchInput.value;
+        });
+    }
 
     // Optional: Close on click outside
     document.addEventListener('click', (e) => {
